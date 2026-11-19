@@ -2,14 +2,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="460" d:DesignHeight="380"
-        Width="460" Height="380"
+        mc:Ignorable="d" d:DesignWidth="460" d:DesignHeight="500"
+        Width="460" Height="500"
         CanResize="false"
         WindowStartupLocation="CenterScreen"
         x:Class="minutnik.MainWindow"
         Title="Minutnik">
 
-    <Grid Margin="24" RowDefinitions="Auto,*,Auto">
+    <Grid Margin="24" RowDefinitions="Auto,*,Auto,Auto">
         <!-- Settings Section -->
         <Border Grid.Row="0"
                 Background="#F7F9FC"
@@ -127,5 +127,11 @@
                     FontWeight="SemiBold"
                     Click="ResetButton_Click" />
         </Grid>
+
+        <!-- History List -->
+        <ListBox Grid.Row="3"
+                 Name="HistoryList"
+                 Height="100"
+                 Margin="0,16,0,0" />
     </Grid>
 </Window>
